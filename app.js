@@ -32,11 +32,13 @@ function doSumThing(){
 
     });
 }
+// lyrics section 
 function getLyrics(artist,title){
+    
     fetch(`https://api.lyrics.ovh/v1/${artist}/${title}`)
     .then(res=>res.json())
     .then(data =>{
-     console.log(data);
+    //  console.log(data);
 const lyricSection = document.getElementById("lyrics");
         const p = document.createElement("p");
         p.innerText=`${data.lyrics}`
